@@ -1,0 +1,2 @@
+# StringFactory
+ Generates random stuff
