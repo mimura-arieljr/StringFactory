@@ -6,15 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const fromNet = data.fromNet;
 
             function getRandomString() {
-                let previousString = "";
+                let previousString = localStorage.getItem("previousString") || "";
                 let currentString = "";
                 do {
                     const randomSourceIndex = Math.floor(Math.random() * (Object.keys(data).length));
                     const randomizeFromNet = fromNet[Math.floor(Math.random() * (fromNet.length))];
                     currentString = randomSourceIndex === 0 ? strings[Math.floor(Math.random() * (strings.length))] : randomizeFromNet.text;
                 } while (currentString === previousString);
-
-                previousString = currentString;
+                
+                localStorage.setItem("previousString", currentString);
+                console.log(localStorage.getItem("previousString"));
                 return currentString;
             }
 
