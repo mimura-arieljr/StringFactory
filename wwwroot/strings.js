@@ -32,7 +32,6 @@ document.getElementById("quoteForm").addEventListener("submit", function (event)
     emailjs.init("4wKG5fG7KUFivlMBd");
     event.preventDefault();
     const name = document.getElementById("name").value;
-    const requestersName = document.getElementById("from").value;
     const quote = document.getElementById("quote").value;
     const quoteForm = document.getElementById("quoteForm");
 
