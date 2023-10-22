@@ -10,6 +10,8 @@
     <title>Today's Quote</title>
     <style>
         html,body {margin: 0; overflow: hidden;}
+        #btnSubmit {opacity: 0;}
+        #btnSubmit:hover {opacity: 1; animation-delay: 2s;}
     </style>
 </head>
 
@@ -24,7 +26,7 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-right mb-2">
-                    <a href="submitform.html" class="btn-sm btn-dark text-decoration-none">Submit a quote</a>
+                    <a href="submitform.html" id="btnSubmit" class="btn text-decoration-none font-monospace">Submit a quote >></a>
                 </div>
             </div>
         </div>
